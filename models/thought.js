@@ -8,7 +8,7 @@ const ReactionSchema = new Schema({
   reactionBody: {
     type: String,
     required: true,
-    maxlength: 200,
+    maxlength: 200
   },
   username: {
     type: String,
@@ -38,7 +38,7 @@ const ThoughtSchema = new Schema({
   },
   reactions: [ReactionSchema]
   },
-  { toJSON: { virtual: true },
+  { toJSON: { virtuals: true },
   id: false
 });
 
